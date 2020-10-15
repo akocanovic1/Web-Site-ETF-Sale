@@ -1,0 +1,5 @@
+
+function pozovi(){
+    Pozivi.slikeSljedeci();
+}
+

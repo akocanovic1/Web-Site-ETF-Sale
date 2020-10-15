@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="rezervacija.css">
+  </head>
+  <body onload="Kalendar.updateujTabelu()">
+    <div class="glavniDiv">
+      <div id="meni">
+        <ul>
+                <li><a href="pocetna.html">Pocetna</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="unos.html">Unos</a></li>
+                <li><a href="rezervacija.html">Rezervacije</a></li>
+                <li><a href="#">Osobe</a></li>
+        </ul>
+        <div id="logo">
+            <img id="slika" src="etf.jpg" alt="Slika!!">
+            </div>
+</div>
+      <div class="sadrzaj">
+        <label id="sala"> Sala:</label>
+        <select class="listaSala" id="sala" onchange="updateujTabelu()">    
+          <option value="0-01">0-01</option>
+          <option value="0-02">0-02</option>
+          <option value="0-03">0-03</option>
+          <option value="0-04">0-04</option>
+          <option value="0-05">0-05</option>
+          <option value="0-06">0-06</option>
+          <option value="0-07">0-07</option>
+          <option value="0-08">0-08</option>
+          <option value="0-09">0-09</option>
+          <option value="1-01">1-01</option>
+          <option value="1-02">1-02</option>
+          <option value="1-03">1-03</option>
+          <option value="1-04">1-04</option>
+          <option value="1-05">1-05</option>
+          <option value="1-06">1-06</option>
+          <option value="1-07">1-07</option>
+          <option value="1-08">1-08</option>
+          <option value="1-09">1-09</option>
+          <option value="VA1">VA1</option>
+          <option value="VA2">VA2</option>
+          <option value="MA">MA</option>
+          <option value="EE1">EE1</option>
+          <option value="EE2">EE2</option>
+        </select>
+        <div class="cek">
+          <label class="labelica">Rezervacija periodična</label>
+          <input class="cekboks" type="checkbox" name="periodican" id="periodicna"> 
+        </div>
+        <div class="unosDatuma">
+          <div class="formaDatum">
+            Pocetak:
+            <input type="time" id="pocetak" onchange="updateujTabelu()">          
+            Kraj:
+            <input type="time" id="kraj" onchange="updateujTabelu()">
+          </div>
+          <div class="formaZaKalendar">
+            <div class="kalendar" id="kalendar">
+              <div class="tabelaKalendar">      
+            </div>
+          </div>
+          <div class="dugmadi">
+          <button class="dugme" onclick="Kalendar.prethodniButton()">Prethodni</button>
+              <button class="dugme" onclick="Kalendar.sljedeciButton()">Sljedeći</button>
+            </div>
+            </div>
+      </div>
+    </div>
+  <script src="./kalendar.js">
+  </script>
+</body>
+</html>
+

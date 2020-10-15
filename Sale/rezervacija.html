@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Zadatak 4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href = "/assets/rezervacija.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>var mjesec=0;</script>
+    </head>
+    <body>
+        <div id = "flex-container">
+            <div id="meni">
+                <ul>
+                        <li><a href="pocetna.html">Pocetna</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                        <li><a href="unos.html">Unos</a></li>
+                        <li><a href="rezervacija.html">Rezervacije</a></li>
+                        <li><a href="osoblje.html">Osobe</a></li>
+                </ul>
+                <div id="logo">
+                    <img  id="slika" src="/assets/etf.jpg" alt="Slika!!">
+                    </div>
+        </div>
+                <div class = "sadrzaj">
+                    <form id="forma">
+                        <label name = "odabir">Odaberi salu:</label>
+                        <select name="sale" id = "sale" onclick="Pozivi.filtrirajPodatke(poc.value,kraj.value,sale.value,document.getElementById('check'), document.getElementById('profesor').options[document.getElementById('profesor').selectedIndex].text)">
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-01', document.getElementById('poc').value, document.getElementById('kraj').value)">0-01</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-02', document.getElementById('poc').value, document.getElementById('kraj').value)">0-02</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-03', document.getElementById('poc').value, document.getElementById('kraj').value)">0-03</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-04', document.getElementById('poc').value, document.getElementById('kraj').value)">0-04</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-05', document.getElementById('poc').value, document.getElementById('kraj').value)">0-05</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-06', document.getElementById('poc').value, document.getElementById('kraj').value)">0-06</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-07', document.getElementById('poc').value, document.getElementById('kraj').value)">0-07</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-08', document.getElementById('poc').value, document.getElementById('kraj').value)">0-08</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '0-09', document.getElementById('poc').value, document.getElementById('kraj').value)">0-09</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-01', document.getElementById('poc').value, document.getElementById('kraj').value)">1-01</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-02', document.getElementById('poc').value, document.getElementById('kraj').value)">1-02</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-03', document.getElementById('poc').value, document.getElementById('kraj').value)">1-03</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-04', document.getElementById('poc').value, document.getElementById('kraj').value)">1-04</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-05', document.getElementById('poc').value, document.getElementById('kraj').value)">1-05</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-06', document.getElementById('poc').value, document.getElementById('kraj').value)">1-06</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-07', document.getElementById('poc').value, document.getElementById('kraj').value)">1-07</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-08', document.getElementById('poc').value, document.getElementById('kraj').value)">1-08</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-09', document.getElementById('poc').value, document.getElementById('kraj').value)">1-09</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, 'VA1', document.getElementById('poc').value, document.getElementById('kraj').value)">VA1</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, 'VA2', document.getElementById('poc').value, document.getElementById('kraj').value)">VA2</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, 'MA', document.getElementById('poc').value, document.getElementById('kraj').value)">MA</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, 'EE1', document.getElementById('poc').value, document.getElementById('kraj').value)">EE1</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, 'EE2', document.getElementById('poc').value, document.getElementById('kraj').value)">EE2</option>
+                            <option onclick="Kalendar.obojiZauzeca(document.getElementById('calendar'), 10, '1-11', document.getElementById('poc').value, document.getElementById('kraj').value)">1-11</option>
+                        </select> <br><br>
+                        
+                        <label >Periodičnost:</label>
+                        <input type="checkbox" id = "check" onchange="Pozivi.filtrirajPodatke(poc.value,kraj.value,sale.value,document.getElementById('check'), document.getElementById('profesor').options[document.getElementById('profesor').selectedIndex].text)">  <br><br>
+                        <label name="poc">Početak: </label><input type="time" value="12:00" name="pocetak" id = "poc" oninput="Pozivi.filtrirajPodatke(poc.value,kraj.value,sale.value,document.getElementById('check'), document.getElementById('profesor').options[document.getElementById('profesor').selectedIndex].text)"> <br><br>
+                        <label>Kraj: </label> <input type="time" value="14:00" name="kraj" id = "kraj" oninput="Pozivi.filtrirajPodatke(poc.value,kraj.value,sale.value,document.getElementById('check'), document.getElementById('profesor').options[document.getElementById('profesor').selectedIndex].text)"><br><br>
+                        <label name = "odabir">Odaberi profesora:</label> <select  id="profesor" onclick="Pozivi.filtrirajPodatke(poc.value,kraj.value,sale.value,document.getElementById('check'), document.getElementById('profesor').options[document.getElementById('profesor').selectedIndex].text)"></select>
+                    </form> 
+
+                    <div id = "calendar"> 
+                        <div class = "month" id="mjesec">Januar </div>
+                        <div class = "daysGrid">
+                            <div>PON</div>
+                            <div>UTO</div>
+                            <div>SRI</div>
+                            <div>ČET</div>
+                            <div>PET</div>
+                            <div>SUB</div>
+                            <div>NED</div>
+                        </div>
+
+                        <div class = "dateGrid">
+                            <div class = "brojDana date " >1</div>
+                            <div class = "brojDana date " id="dan">2</div>
+                            <div class = "brojDana date " id="dan">3</div>
+                            <div class = "brojDana " id="dan">4</div>
+                            <div class = "brojDana " id="dan">5</div>
+                            <div class = "brojDana " id="dan">6</div>
+                            <div class = "brojDana "  id="dan">7</div>
+                            <div class = "brojDana "  id="dan">8</div>
+                            <div class = "brojDana "  id="dan">9</div>
+                            <div class = "brojDana "  id="dan">10</div>
+                            <div class = "brojDana date ">11</div>
+                            <div class = "brojDana date ">12</div>
+                            <div class = "brojDana date ">13</div>
+                            <div class = "brojDana date ">14</div>
+                            <div class = "brojDana date ">15</div>
+                            <div class = "brojDana date ">16</div>
+                            <div class = "brojDana date ">17</div>
+                            <div class = "brojDana date ">18</div>
+                            <div class = "brojDana date ">19</div>
+                            <div class = "brojDana date ">20</div>
+                            <div class = "brojDana date ">21</div>
+                            <div class = "brojDana date ">22</div>
+                            <div class = "brojDana date ">23</div>
+                            <div class = "brojDana date ">24</div>
+                            <div class = "brojDana date ">25</div>
+                            <div class = "brojDana date ">26</div>
+                            <div class = "brojDana date ">27</div>
+                            <div class = "brojDana date ">28</div>
+                            <div class = "brojDana date ">29</div>
+                            <div class = "brojDana date ">30</div>
+                            <div class = "brojDana date ">31</div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <input type="button" name="back" value="Prethodni" id = "back" onclick="Kalendar.iscrtajKalendar(document.getElementById('calendar'), 101)">
+                    <input type="button" name="next" value="Sljedeći" id = "next" onclick="Kalendar.iscrtajKalendar(document.getElementById('calendar'), 100)">
+                    
+                </div>
+            </div>
+           
+            <script src = "/assets/kalendar.js"></script>
+            <script src="/js/Pozivi.js"> </script>
+            <script src="/js/rezervacija.js"> </script>
+    </body>
+</html>

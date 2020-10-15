@@ -1,0 +1,17 @@
+{
+    "periodicna": {
+        "dan": ["1","3"],
+        "semestar": ["zimsi","zimski"],
+        "pocetak": ["10:00","13:00"],
+        "kraj": ["11:30","14:30"],
+        "naziv": ["1-01","0-04"],
+        "predavac": ["Novica Nosovic", "Zeljko Juric"]
+    }, 
+    "vanredna": {
+        "datum":["10.12.2019","24.12.2019"],
+        "pocetak":["10:30","12:00"],
+        "kraj": ["12:00","13:00"],
+        "naziv": ["0-01","VA1"],
+        "predavac": ["Ivona Ivkovic","Sejla Becirovic"]
+    }
+}

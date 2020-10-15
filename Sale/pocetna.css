@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(180, 180, 180);
+}
+#meni{
+    background-color: rgb(40, 40, 44);
+    float:top;
+    top:25pt;
+    height: 82px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+#meni ul{
+    position: absolute;
+    bottom: 0pt;
+}
+#meni li {
+    list-style-type: none;
+    display: inline;
+    text-align: bottom;
+    padding: 4px;
+    bottom:0pt;
+}
+#meni li a{
+    color: rgb(253, 249, 249);
+    font-family: 'Calibri';
+    font-size: 14pt;
+}
+#logo{
+    float: center;
+    background-color: coral;
+    width: 50pt;
+    height: 50pt;
+    position: absolute;
+    top: -40%;
+    right: 50%;
+}
+#slika{
+    width: 50pt;
+    height: 50pt;
+}
+#sadrzaj{
+    background-color: rgb(180, 180, 180);
+    padding: 300pt;
+    margin-top: 30pt;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.galerija{
+    display: grid;
+    margin: 1pt;
+    padding: 1pt;
+    grid-template-columns: repeat(1,1fr);
+    position: absolute;
+    top:10pt;
+    left:20%;
+}
+@media (min-width: 600px) {
+    .galerija{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2pt;
+        align-items: stretch;
+        justify-items: auto;
+        position: absolute;
+        top:10pt;
+        left:30%;
+    }
+}
+@media (min-width: 800px){
+    .galerija{
+        display: grid;
+        grid-template-columns: repeat(3,1fr) ;
+        row-gap: 2pt;
+        column-gap: 1pt;
+        /*grid-gap: 2px;*/
+        /*align-items: stretch;
+        justify-items: auto;*/
+        position: absolute;
+        margin: 1pt;
+        padding: 1pt;
+        top:10pt;
+        left:20%;
+    }
+}
+.gallery_img{
+    width: 150pt;
+    height: 150pt; 
+    border: 2pt solid black;
+    border-radius: 7pt;
+}
+@media (max-width: 600px){
+    .galerija{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 1pt;
+    margin: 1pt;
+    align-items: stretch;
+    justify-items: auto;
+    position: absolute;
+    top:20pt;
+    left:10pt;
+    width: 80%;
+    height: 80%;
+    }
+    .gallery_img{
+        width: 80%;
+        height: 80%; 
+    }
+}

@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(180, 180, 180);
+}
+#meni{
+    background-color: rgb(40, 40, 44);
+    float:top;
+    top:25pt;
+    height: 82px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+#meni ul{
+    position: absolute;
+    bottom: 0pt;
+}
+#meni li {
+    list-style-type: none;
+    display: inline;
+    text-align: bottom;
+    padding: 4px;
+    bottom:0pt;
+}
+#meni li a{
+    color: rgb(253, 249, 249);
+    font-family: 'Calibri';
+    font-size: 14pt;
+}
+#logo{
+    float: center;
+    background-color: coral;
+    width: 50pt;
+    height: 50pt;
+    position: absolute;
+    top: -40%;
+    right: 50%;
+}
+#slika{
+    width: 50pt;
+    height: 50pt;
+}
+#sadrzaj{
+    background-color: rgb(180, 180, 180);
+    padding: 300pt;
+    margin-top: 30pt;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#osobe li{
+    margin: 0;
+    padding: 0;
+    font-family:"Calibri";
+    font-size: 15pt;
+}
+#osobe{
+    border: 2pt solid black;
+    margin-right:35%;
+    margin-left: 35%;
+    margin-top: 50pt;
+    width:25%;
+    padding: 25pt;
+    font-family:"Calibri";
+    font-size: 15pt;
+}
+p{
+    font-family:"Calibri";
+    font-size: 25pt;
+    margin-right:35%;
+    margin-left: 35%;
+    margin-top: 50pt;
+}
